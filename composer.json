@@ -1,0 +1,32 @@
+{
+    "name": "vvk/wubi",
+    "description": "A chinese wubi coding query package.",
+    "keywords": [
+        "chinese",
+        "wubi",
+        "wubi86",
+        "wubi96",
+        "wubi06",
+        "pinyin",
+        "vvk",
+        "Unicode"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/vvk/wubi",
+    "authors": [
+        {
+            "name": "vvk",
+            "email": "845176725@qq.com",
+            "homepage": "https://github.com/vvk"
+        }
+    ],
+    "require": {
+        "php":">=7.2"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Vvk\\Wubi\\": "src/"
+        }
+    }
+}
