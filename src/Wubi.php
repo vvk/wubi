@@ -74,7 +74,7 @@ class Wubi
 	}
 
     /**
-     * 过滤字母、数字、标点
+     * 过滤非汉字
      * @param  string $text
      * @return string
      */
@@ -84,14 +84,8 @@ class Wubi
             return $text;
         }
 
-        $search = '/[\w\s\p{P}]/i';
-        $text = preg_replace($search, '', $text);
-
-        $punctuation = ['。', '？', '！', '，', '、', '；', '：', '“', '”', '‘', '（', '）', '《', '》',
-         '〈', '〉', '【', '】', '『', '』', '「', '」', '﹃', '﹄', '〔', '〕', '…', '—', '～', '﹏', '￥', '……'];
-
-        $text = str_replace($punctuation, '', $text);
-        return $text;
+        $partten = '/[^\x{4e00}-\x{9fa5}]/u';
+        return preg_replace($partten, '', $text);
     }
 
     /**
